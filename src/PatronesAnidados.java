@@ -19,10 +19,12 @@ public class PatronesAnidados {
                 userNumberOption = scInt.nextInt();
                 zPattern(userNumberOption);
                 break;
-/*
             case 3:
-                //Instructions
+                System.out.print("Ingrese un numero a iterar: \n");
+                userNumberOption = scInt.nextInt();
+                xPattern(userNumberOption);
                 break;
+/*
             case 4:
                 //Instructions
                 break;
@@ -60,6 +62,22 @@ public class PatronesAnidados {
         for ( int i = 1; i <= userNumber; i++ ) {
             for ( int j = 1; j <= userNumber; j++ ) {
                 if ( i == 1 || i == userNumber || i + j == userNumber ) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("\n");
+        }
+        System.out.print("Patron finalizado con exito!");
+
+    }
+
+    private static void xPattern (int userNumber) {
+
+        for ( int i = 1; i <= userNumber; i++ ) {
+            for ( int j = 1; j <= userNumber; j++ ) {
+                if ( i == j || i + j == userNumber + 1 ) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");

@@ -5,42 +5,40 @@ public class PatronesAnidados {
         Scanner scInt = new Scanner(System.in);
         int userNumberOption;
 
-        System.out.print("Seleccione cual patron desea ejecutar: \n Presione 1 para el primer patron. \n Presione 2 para el segundo patron. \n Presione 3 para el tercer patron. \n Presione 4 para el cuarto patron. \n");
-        userNumberOption = scInt.nextInt();
+        do {
+            System.out.print("Seleccione cual patron desea ejecutar: \n Presione 1 para el primer patron. \n Presione 2 para el segundo patron. \n Presione 3 para el tercer patron. \n Presione 4 para el cuarto patron. \n \n Presione 0 para salir. \n");
+            userNumberOption = scInt.nextInt();
 
-        switch (userNumberOption) {
-            case 1:
-                System.out.print("Ingrese un numero a iterar: \n");
-                userNumberOption = scInt.nextInt();
-                squarePattern(userNumberOption);
-                break;
-            case 2:
-                System.out.print("Ingrese un numero a iterar: \n");
-                userNumberOption = scInt.nextInt();
-                zPattern(userNumberOption);
-                break;
-            case 3:
-                System.out.print("Ingrese un numero a iterar: \n");
-                userNumberOption = scInt.nextInt();
-                xPattern(userNumberOption);
-                break;
-            case 4:
-                System.out.print("Ingrese un numero a iterar: \n");
-                userNumberOption = scInt.nextInt();
-                zBold(userNumberOption);
-                break;
+            switch (userNumberOption) {
+                case 1:
+                    System.out.print("Ingrese un numero a iterar: \n");
+                    userNumberOption = scInt.nextInt();
+                    squarePattern(userNumberOption);
+                    break;
+                case 2:
+                    System.out.print("Ingrese un numero a iterar: \n");
+                    userNumberOption = scInt.nextInt();
+                    zPattern(userNumberOption);
+                    break;
+                case 3:
+                    System.out.print("Ingrese un numero a iterar: \n");
+                    userNumberOption = scInt.nextInt();
+                    xPattern(userNumberOption);
+                    break;
+                case 4:
+                    System.out.print("Ingrese un numero a iterar: \n");
+                    userNumberOption = scInt.nextInt();
+                    zBold(userNumberOption);
+                    break;
 /*
             default:
                 throw new IllegalStateException("Unexpected value: " + userNumberOption);
 */
-        }
+            }
+        } while ( userNumberOption != 0 );
 
-/*
-        System.out.print("Ingrese un numero: \n");
-        userNumberOption = scInt.nextInt();
 
-        patronUno(userNumberOption);
-*/
+
     }
 
     private static void squarePattern(int userNumber ) {
@@ -55,7 +53,7 @@ public class PatronesAnidados {
             }
             System.out.print("\n");
         }
-        System.out.print("Patron finalizado con exito!");
+        System.out.print("Patron finalizado con exito! \n \n");
 
     }
 
@@ -71,7 +69,7 @@ public class PatronesAnidados {
             }
             System.out.print("\n");
         }
-        System.out.print("Patron finalizado con exito!");
+        System.out.print("Patron finalizado con exito! \n \n");
 
     }
 
@@ -87,7 +85,7 @@ public class PatronesAnidados {
             }
             System.out.print("\n");
         }
-        System.out.print("Patron finalizado con exito!");
+        System.out.print("Patron finalizado con exito! \n \n");
 
     }
 
@@ -103,7 +101,7 @@ public class PatronesAnidados {
             }
             System.out.print("\n");
         }
-        System.out.print("Patron finalizado con exito!");
+        System.out.print("Patron finalizado con exito! \n \n");
 
     }
 }

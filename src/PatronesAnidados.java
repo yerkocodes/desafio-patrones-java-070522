@@ -24,10 +24,12 @@ public class PatronesAnidados {
                 userNumberOption = scInt.nextInt();
                 xPattern(userNumberOption);
                 break;
-/*
             case 4:
-                //Instructions
+                System.out.print("Ingrese un numero a iterar: \n");
+                userNumberOption = scInt.nextInt();
+                zBold(userNumberOption);
                 break;
+/*
             default:
                 throw new IllegalStateException("Unexpected value: " + userNumberOption);
 */
@@ -78,6 +80,22 @@ public class PatronesAnidados {
         for ( int i = 1; i <= userNumber; i++ ) {
             for ( int j = 1; j <= userNumber; j++ ) {
                 if ( i == j || i + j == userNumber + 1 ) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("\n");
+        }
+        System.out.print("Patron finalizado con exito!");
+
+    }
+
+    private static void zBold (int userNumber) {
+
+        for ( int i = 1; i <= userNumber; i++ ) {
+            for ( int j = 1; j <= userNumber; j++ ) {
+                if ( i == j || j != 1 && j != userNumber ) {
                     System.out.print("*");
                 } else {
                     System.out.print(" ");
